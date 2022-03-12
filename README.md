@@ -84,7 +84,7 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 5. The output of the Geffe generator xG is described as follows:
 >xG = (x1 and x2) or (not x1 and x3). The period of this generator is (2^m1 – 1)(2^m2 – 10)(2^m3 – 1), where m1, m2, and m3 are the lengths of the first, second, and third LFSRs, respectively.
 
-## Asserts
+## Assets
 
 Example-1:
 ![Example of test table](Task/img/key_test_example.jpg)
