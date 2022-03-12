@@ -33,7 +33,7 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 - [ ] Generation method - LFSR.
 ### Functional testing:
 - [ ] The source file is encrypted with the given key state and then decrypted with the same state. The transformations must be equivalent.
-- [ ] Output values for the initial state of the key - all 1tsy.
+- [ ] [Output values](Task/InitialFunctionalTests/Tests.docx) for the initial state of the key - all 1tsy.
 - [ ] Make sure that these transformations work with all popular extensions:
 **Docx**, **Gif**, **Mp4**, **Jpeg**, **txt**, **BD**, **exe**, **pdf**, ….
 - [ ] Make a table of test results.
@@ -53,8 +53,8 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 ### Task features:
 1. Numbering from right to left, the most significant bit goes away, left shift is a feature of LFSR.
 2. Topic: Stream encryption systems.
-3. Study the theoretical material for completing task No. 2 (file theory_task No. 2.docx).
-4. Complete the task according to the given option. Look at the option in table No. 1.
+3. Study the [theoretical material](Task/Theory/Theory.docx) for completing task 2.
+4. Complete the task according to the given option (my option is 10 and max power is 32).
 5. For successful protection, you must have:
    - a correctly working program, which takes into account all the requirements according to the task;
    - tests and files for testing the program;
