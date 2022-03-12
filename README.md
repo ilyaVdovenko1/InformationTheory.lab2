@@ -14,7 +14,7 @@ A stream cipher is a symmetric key cipher where plaintext digits are combined wi
 The pseudorandom keystream is typically generated serially from a random seed value using digital shift registers. The seed value serves as the cryptographic key for decrypting the ciphertext stream. Stream ciphers represent a different approach to symmetric encryption from block ciphers. Block ciphers operate on large blocks of digits with a fixed, unvarying transformation. This distinction is not always clear-cut: in some modes of operation, a block cipher primitive is used in such a way that it acts effectively as a stream cipher. Stream ciphers typically execute at a higher speed than block ciphers and have lower hardware complexity. However, stream ciphers can be susceptible to security breaches (see stream cipher attacks); for example, when the same starting state (seed) is used twice.
 
 ## Task Formulation:
-Implement a streaming encryption and decryption system for a file with any content using a key sequence generator based on a linear feedback shift register LFSR1 (register dimensions are shown). Enter the initial state of the register from the keyboard. The field for entering the state of the register should ignore any characters other than 0 and 1. Display the generated key (a sequence of 0 and 1), the source file and the encrypted file in binary form. The program must not be written in console mode. The result of the program's operation is an encrypted/decrypted file.
+>Implement a streaming encryption and decryption system for a file with any content using a key sequence generator based on a linear feedback shift register LFSR1 (register dimensions are shown). Enter the initial state of the register from the keyboard. The field for entering the state of the register should ignore any characters other than 0 and 1. Display the generated key (a sequence of 0 and 1), the source file and the encrypted file in binary form. The program must not be written in console mode. The result of the program's operation is an encrypted/decrypted file.
 
 ### My task:
 Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
@@ -37,7 +37,7 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 - [ ] Make sure that these transformations work with all popular extensions:
 **Docx**, **Gif**, **Mp4**, **Jpeg**, **txt**, **BD**, **exe**, **pdf**, ….
 - [ ] Make a table of test results.
-- [ ] Manually create a key generator table for the "all 1s" state, print it out, compare with point 2.
+- [ ] Manually create a key generator table for the "all 1s" state(see an example-1), print it out, compare with point 2.
 - [ ] Check the functionality of the entire UI. Error handling style - console on ui.
 - [ ] To automate the process, set up an external script that will hash from files and compare to check equivalence. Also check visually.
 - [ ] Check UI input key ref text and so on.
@@ -66,12 +66,27 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 ## Git model:
    ### future-forward/dev:
 
+| Step | Name of feature-branch         | Merge in main |
+|------|--------------------------------|---------------|
+| 1    | step1-add_additional_materials | fast-forward  |
+
+
 ## Answers to some questions from theory
 
-1. What bits of the register will be involved in the formation of the value inserted into the first bit? **(non-zero coefficients of the polynomial determine the bits of the register that will participate in the formation of the value pushed into the first bit)**
-2. What is the maximum possible period? **(2^m - 1, where m is the number of digits of the register, the degree of the polynomial).**
-3. What is the number of digits in the register? **(degree of polynomial)**
-4. What is an M-sequence? **(The sequence of the maximum possible period for a given generator is called an M-sequence)**
-5. The output of the Geffe generator xG is described as follows: **xG = (x1 and x2) or (not x1 and x3). The period of this generator is (2^m1 – 1)(2^m2 – 10)(2^m3 – 1), where m1, m2, and m3 are the lengths of the first, second, and third LFSRs, respectively.**
+1. What bits of the register will be involved in the formation of the value inserted into the first bit? 
+>non-zero coefficients of the polynomial determine the bits of the register that will participate in the formation of the value pushed into the first bit.
+2. What is the maximum possible period? 
+>2^m - 1, where m is the number of digits of the register, the degree of the polynomial.
+3. What is the number of digits in the register? 
+>degree of polynomial.
+4. What is an M-sequence? 
+>The sequence of the maximum possible period for a given generator is called an M-sequence.
+5. The output of the Geffe generator xG is described as follows:
+>xG = (x1 and x2) or (not x1 and x3). The period of this generator is (2^m1 – 1)(2^m2 – 10)(2^m3 – 1), where m1, m2, and m3 are the lengths of the first, second, and third LFSRs, respectively.
+
+## Asserts
+
+Example-1:
+![Example of test table](Task/img/key_test_example.jpg)
 
 
