@@ -25,12 +25,12 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 - [ ] Add the ability to enter from the UI. Ignore everything except 1 and 0.
 - [ ] The program must be able to read files with any extension.
 - [ ] The program must be able to save the file with the result.
-- [ ] **The program guarantees the equivalence of file conversion through the full cycle of encryption/decryption**.
-- [ ] Operation between bit-key and bit-file - **xor**.
-- [ ] Generate exactly as many bytes of the key as required by the size of the input stream.
+- [x] **The program guarantees the equivalence of file conversion through the full cycle of encryption/decryption**.
+- [x] Operation between bit-key and bit-file - **xor**.
+- [x] Generate exactly as many bytes of the key as required by the size of the input stream.
 - [ ] The program must run quickly.
 - [ ] In case of problems with speed, take only the first n-blocks
-- [ ] Generation method - LFSR.
+- [x] Generation method - LFSR.
 ### Functional testing:
 - [ ] The source file is encrypted with the given key state and then decrypted with the same state. The transformations must be equivalent.
 - [ ] [Output values](Task/InitialFunctionalTests/Tests.docx) for the initial state of the key - all 1tsy.
@@ -69,6 +69,7 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 | Step | Name of feature-branch         | Merge in main |
 |------|--------------------------------|---------------|
 | 1    | step1-add_additional_materials | fast-forward  |
+| 2    | step2-add-project-files        | fast-forward  |
 
 
 ## Answers to some questions from theory
