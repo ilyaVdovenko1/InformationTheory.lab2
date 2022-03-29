@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace Lab2_BackEnd.Ciphers.StreamCipher;
+﻿namespace Lab2_BackEnd.Ciphers.StreamCipher;
 
 public class Key
 {

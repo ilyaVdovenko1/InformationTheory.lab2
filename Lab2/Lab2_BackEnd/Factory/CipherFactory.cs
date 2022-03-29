@@ -4,7 +4,7 @@ using Lab2_BackEnd.Interfaces;
 
 namespace Lab2_BackEnd.Factory
 {
-    public class CipherFactory
+    public static class CipherFactory
     {
         public static ICipher ProduceCipher(Enums.Ciphers cipher)
         {

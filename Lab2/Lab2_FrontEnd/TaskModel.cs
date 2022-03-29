@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab2_FrontEnd
 {
@@ -39,7 +37,7 @@ namespace Lab2_FrontEnd
 
 
 
-            var bitsAsNumbers = bits.Select(x => uint.Parse(x) - 1).Where(x => x >= 0 || x < power).ToList();
+            var bitsAsNumbers = bits.Select(x => uint.Parse(x) - 1).Where(x => x < power).ToList();
             bitsAsNumbers.Sort();
 
             if (bitsAsNumbers.Count == 0 || bitsAsNumbers.Count % 2 == 1)

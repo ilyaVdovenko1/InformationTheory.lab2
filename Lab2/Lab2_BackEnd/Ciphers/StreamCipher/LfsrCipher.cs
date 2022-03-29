@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Text;
 using Lab2_BackEnd.Interfaces;
 
 namespace Lab2_BackEnd.Ciphers.StreamCipher;

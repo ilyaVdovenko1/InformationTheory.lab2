@@ -2,21 +2,13 @@
 using Lab2_BackEnd.Factory;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lab2_FrontEnd
 {
@@ -94,7 +86,6 @@ namespace Lab2_FrontEnd
             {
                 var taskModel = new TaskModel(BitsToXor_TB.Text, MaxPower_TB.Text);
                 var keyModel = new KeyModel(this.KeyInitStateBits_TB.Text, taskModel.MaxPower);
-                var datamodel = new DataModel();
                 var cipher = CipherFactory.ProduceCipher(Ciphers.LFSRCipher);
                 cipher.RegisterShowKey(ShowKey);
                 var key = new Lab2_BackEnd.Ciphers.StreamCipher.Key(keyModel.KeyStartState, taskModel.BitsToXor, taskModel.MaxPower);
