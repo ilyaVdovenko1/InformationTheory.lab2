@@ -6,10 +6,26 @@
         xmlns:local="clr-namespace:Lab2_FrontEnd"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="SorceBits_TB" HorizontalAlignment="Left" Height="268" Margin="29,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Width="139"/>
+    <Grid RenderTransformOrigin="0.503,0.555">
+        <TextBox x:Name="SorceBits_TB" IsReadOnly="True" HorizontalAlignment="Left" Height="268" Margin="29,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Width="139"/>
         <TextBox x:Name="KeyBits_TB" IsReadOnly="True" HorizontalAlignment="Left" Margin="222,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="268" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
-        <TextBox x:Name="ResultBits_TB" IsReadOnly="True" HorizontalAlignment="Left" Margin="400,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="268" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="ResultBits_TB" IsReadOnly="True" HorizontalAlignment="Left" Margin="421,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="268" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="KeyInitStateBits_TB" HorizontalAlignment="Left" Margin="222,64,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="317" Height="19"  KeyDown="KeyInitStateBits_TB_KeyDown"  TextChanged="KeyInitStateBits_TB_TextChanged"  />
+        <Label Content="Стартовое состояние ключа" HorizontalAlignment="Left" Margin="29,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.552,0.447"/>
+        <TextBox x:Name="MaxPower_TB" IsReadOnly="True" HorizontalAlignment="Left" Margin="222,32,0,0" TextWrapping="Wrap" Text="32" VerticalAlignment="Top" Width="54" TextChanged="MaxPower_TB_TextChanged"/>
+        <Label Content="Количество бит регистра" HorizontalAlignment="Left" Margin="29,27,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BitsToXor_TB" IsReadOnly="True" HorizontalAlignment="Left" Margin="567,32,0,0" TextWrapping="Wrap" Text="32,28,27,1" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Значимые биты" HorizontalAlignment="Left" Margin="442,27,0,0" VerticalAlignment="Top"/>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" Click="MenuItemOpen_OnClick"></MenuItem>
+                <MenuItem Header="Сохранить результат как" Click="MenuItemSave_OnClick">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBlock x:Name="CounterOfStartStateCharacters_TB" HorizontalAlignment="Left" Margin="663,66,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.605"/>
+        <Button x:Name="Process_Btn" Content="Обработать" HorizontalAlignment="Left" Margin="581,348,0,0" VerticalAlignment="Top" Height="33" Width="142" Click="Process_Btn_Click"/>
+        <TextBlock x:Name="Console_TB" HorizontalAlignment="Left" Height="203" Margin="581,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Red" Background="WhiteSmoke"/>
 
     </Grid>
 </Window>

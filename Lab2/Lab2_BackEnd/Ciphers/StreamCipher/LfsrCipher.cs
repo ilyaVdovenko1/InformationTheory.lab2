@@ -1,16 +1,22 @@
 ﻿using System.Collections;
+using System.Text;
 using Lab2_BackEnd.Interfaces;
 
 namespace Lab2_BackEnd.Ciphers.StreamCipher;
 
 public class LfsrCipher : ICipher
 {
+    private ICipher.ShowKey? showKeyHandler;
     public byte[] Encrypt(Key keyStartState, IEnumerable<byte> bytesFromFile)
     {
         var fromFile = bytesFromFile as byte[] ?? bytesFromFile.ToArray();
         var fileData = fromFile.ToArray();
         var keyGenerator = new KeyGenerator(keyStartState);
         var key = keyGenerator.GetNBytes(fileData.Length);
+        if (showKeyHandler != null)
+        {
+            showKeyHandler?.Invoke(key);
+        }
         var result = new byte[fileData.Length];
         for (var i = 0; i < result.Length; i++)
         {
@@ -56,5 +62,10 @@ public class LfsrCipher : ICipher
             byteIndex++;
         }
         return bytes;
+    }
+
+    public void RegisterShowKey(ICipher.ShowKey show)
+    {
+        this.showKeyHandler = show;
     }
 }

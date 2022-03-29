@@ -7,4 +7,8 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Lab2_BackEnd\Lab2_BackEnd.csproj" />
+    </ItemGroup>
+
 </Project>

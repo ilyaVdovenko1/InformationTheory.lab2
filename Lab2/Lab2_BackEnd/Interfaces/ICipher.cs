@@ -8,5 +8,9 @@ namespace Lab2_BackEnd.Interfaces
     {
         public byte[] Encrypt(Key keyStartState, IEnumerable<byte> bytesFromFile);
         public byte[] Decrypt(Key keyStartState, IEnumerable<byte> bytesFromFile);
+
+        public void RegisterShowKey(ShowKey show);
+
+        delegate void ShowKey(byte[] key);
     }
 }

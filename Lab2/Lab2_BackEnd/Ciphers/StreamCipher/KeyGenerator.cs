@@ -2,7 +2,7 @@
 using System.Diagnostics;
 
 namespace Lab2_BackEnd.Ciphers.StreamCipher;
-
+public delegate void KeyShowHandler(bool flag);
 public class KeyGenerator
 {
     private readonly List<uint> bitsToXor;
@@ -10,6 +10,8 @@ public class KeyGenerator
     private readonly BitArray currentKeyState;
 
     private int counter;
+
+    private KeyShowHandler? show;
     
     
     public KeyGenerator(Key startState)
@@ -28,6 +30,8 @@ public class KeyGenerator
 
         return result;
     }
+
+
 
     private byte GenerateOneByte()
     {
