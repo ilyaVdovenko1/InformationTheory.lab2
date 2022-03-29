@@ -20,21 +20,21 @@ The pseudorandom keystream is typically generated serially from a random seed va
 Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 
 ## Program requirements:
-- [ ] Text entry of the initial state of the key, checking for length and **ignoring all characters except 0 and 1**.
-- [ ] Displaying the bits of the source file, the bits of the key and the bits of the result one under the other.
+- [x] Text entry of the initial state of the key, checking for length and **ignoring all characters except 0 and 1**.
+- [x] Displaying the bits of the source file, the bits of the key and the bits of the result one under the other.
 - [ ] Add the ability to enter from the UI. Ignore everything except 1 and 0.
-- [ ] The program must be able to read files with any extension.
-- [ ] The program must be able to save the file with the result.
+- [x] The program must be able to read files with any extension.
+- [x] The program must be able to save the file with the result.
 - [x] **The program guarantees the equivalence of file conversion through the full cycle of encryption/decryption**.
 - [x] Operation between bit-key and bit-file - **xor**.
 - [x] Generate exactly as many bytes of the key as required by the size of the input stream.
-- [ ] The program must run quickly.
+- [x] The program must run quickly.
 - [ ] In case of problems with speed, take only the first n-blocks
 - [x] Generation method - LFSR.
 ### Functional testing:
 - [ ] The source file is encrypted with the given key state and then decrypted with the same state. The transformations must be equivalent.
 - [ ] [Output values](Task/InitialFunctionalTests/Tests.docx) for the initial state of the key - all 1tsy.
-- [ ] Make sure that these transformations work with all popular extensions:
+- [x] Make sure that these transformations work with all popular extensions:
 **Docx**, **Gif**, **Mp4**, **Jpeg**, **txt**, **BD**, **exe**, **pdf**, ….
 - [ ] Make a table of test results.
 - [ ] Manually create a key generator table for the "all 1s" state(see an example-1), print it out, compare with point 2.
@@ -70,6 +70,7 @@ Impliment this polinom for LFSR1: **x^32 + x^28 + x^27 + x + 1**
 |------|--------------------------------|---------------|
 | 1    | step1-add_additional_materials | fast-forward  |
 | 2    | step2-add-project-files        | fast-forward  |
+| 3    | step3-working-on-ui            | fast-forward  |
 
 
 ## Answers to some questions from theory
